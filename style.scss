@@ -171,3 +171,100 @@ footer {
         margin-bottom: 0px;
     }
 }
+
+/* page restaurant */
+
+#logo {
+    position: relative;
+}
+
+#arrow {
+    position: absolute;
+    width: 10%;
+    vertical-align: middle;
+    left: 10px;
+}
+
+.header__resto {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.resto_top {
+    width: auto;
+    background-image: url("picture/a-la-francaise.jpg");
+    background-size: cover;
+}
+
+.resto_top_empty {
+    height: 200px;
+}
+
+.resto_name {
+    background-color: whitesmoke;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "shrikhand", arial, serif;
+    font-size: 1.8em;
+    border-radius: 20px 20px 0 0;
+    & img {
+        width: 100%;
+    }
+}
+
+.line_dish {
+    clear: both;
+    border-top: 4px solid $third_color;
+    width: 20%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.entree, .main_dish, .dessert {
+    background-color: whitesmoke;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    & h4 {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        padding-top: 20px;
+        padding-left: 20px;
+        font-size: 1.2em;
+    }
+}
+
+.dish_btn {
+    background-color: white;
+    box-shadow: 4px 4px 8px grey;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+    & h1 {
+        font-size: 1.2em;
+        text-align: left;
+    }
+    & h2 {
+        font-size: 0.9em;
+        text-align: left;
+        font-weight: normal;
+    }
+}
+
+.name_dish {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.price {
+    font-weight: bold;
+}
