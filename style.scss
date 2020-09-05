@@ -2,7 +2,7 @@
 $primary_color: #9356DC ;
 $secondary_color: #ff79da ; 
 $third_color: #99e2d0 ;
-
+$light_primary:#c9abec;
 @font-face {
     font-family: "shrikhand";
     src: url("template/Shrikhand-Regular.otf");
@@ -54,10 +54,8 @@ section {
     padding-bottom: 10px;
     background-color: #cdcdc1;
     border-top: 2px solid grey;
-    & img {
-        width: 6%;
-        vertical-align: middle;
-        margin-right: 20px;
+    & .fas {
+        padding-right: 10px;
     }
 }
 
@@ -72,37 +70,65 @@ section {
     margin: auto;
     text-align: center;
     background-color: $primary_color;
+    background-image: linear-gradient(to bottom right, $secondary_color, rgba(255,255,255,0));
     padding: 0.8rem;
     border-radius: 2rem;
     color: white;
-    box-shadow: 6px 6px 10px grey;
+    box-shadow: 6px 6px 10px lightgray;
+    &:hover {
+        background-color: $light_primary;
+        box-shadow: 6px 6px 10px gray;
+        transition: all 1s;
+    }
 }
 
 .fonctionnement {
     padding-bottom: 20px;
 }
 
-.operation_btn {
-    width: 80%;
-    font-weight: bold;
-    margin-left: auto;
-    margin-right: auto;
+.ope_btn {
+   width: 70vw;
+    display: flex;
+    align-items: center;
+    margin: auto;
     margin-bottom: 20px;
-    padding: 1.5rem;
-    border-radius: 1.3rem;
-    box-shadow: 4px 4px 10px grey;
-    position: relative;
-    & img {
-        width: 8%;
-        vertical-align: middle;
-        margin-right: 30px;
+    :hover {
+        background-color: lighten($primary_color, 35%);
+        transition-duration: 500ms;
+        .fas {
+            color: $primary_color;
+            transition-duration: 500ms;
+        }
     }
 }
 
-.overlay {    
+.number {
+    background-color: $primary_color;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
     position: absolute;
-    right: 0;
-    top: 0;
+    margin-left: -14px;
+}
+
+.operation {
+    border-radius: 15px;
+    box-shadow: 4px 4px 10px lightgrey;
+    width: 70vw;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: bold;
+    background-color: whitesmoke;
+}
+
+.fa-mobile-alt, .fa-bars, .fa-store {
+    padding-left: 30px;
+    padding-right: 20px;
 }
 
 .list_restaurant {
@@ -116,7 +142,7 @@ section {
     margin-left: 20px;
     margin-right: 20px;
     border-radius: 1.3rem;
-    box-shadow: 4px 4px 10px grey;
+    box-shadow: 4px 4px 10px lightgrey;
 
     & img {
         width: 100%;
@@ -124,26 +150,38 @@ section {
     }
 }
 
-.picture_restau {
-    width: 10%;
-}
-
 .restau__low {
     margin-left: 20px;
     margin-right: 20px;
-    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     display: flex;
     justify-content: space-between;
-    & img {
-        width:100%;
-        border-radius: 0;
-        margin-bottom: 10px;
-    }
+    align-items: center;
     & a {
         text-decoration: none;
         font-weight: bold;
         color: black;
         font-size: 1.5rem;
+    }
+}
+
+.fa-heart {
+    font-size: 2em;
+}
+
+.heart_restau {
+    width: 60px;
+    height: 60px;
+    background: url("picture/favorite_border-black-18dp.svg");
+    background-size: cover;
+    &:focus{
+        background: url("picture/favorite-black-18dp.svg");
+        background-size: cover;
+        }
+    &:hover {
+        background: url("picture/favorite-black-18dp.svg");
+        background-size: cover;
     }
 }
 
@@ -160,16 +198,16 @@ footer {
         margin-block-start: 0;
         font-size: 1.6em;
     }
-    & img {
-        width: 6%;
-        vertical-align: middle;
-    }
     & p {
         line-height: 2em;
         padding-bottom: 10px;
         margin-left: 20px;
         margin-bottom: 0px;
     }
+}
+
+.fa-utensils, .fa-handshake {
+    padding-right: 10px;
 }
 
 /* page restaurant */
@@ -193,8 +231,23 @@ footer {
 
 .resto_top {
     width: auto;
-    background-image: url("picture/a-la-francaise.jpg");
     background-size: cover;
+}
+
+.resto_a_la_fr {
+    background-image: url("picture/a-la-francaise.jpg");
+}
+
+.resto_delice {
+    background-image: url("picture/le-delice-des-sens.jpg");
+}
+
+.resto_enchant {
+    background-image: url("picture/note.png");
+}
+
+.resto_palette {
+    background-image: url("picture/la-palette-du-gout.jpg");
 }
 
 .resto_top_empty {
@@ -211,9 +264,6 @@ footer {
     font-family: "shrikhand", arial, serif;
     font-size: 1.8em;
     border-radius: 20px 20px 0 0;
-    & img {
-        width: 100%;
-    }
 }
 
 .line_dish {
@@ -240,7 +290,7 @@ footer {
 
 .dish_btn {
     background-color: white;
-    box-shadow: 4px 4px 8px grey;
+    box-shadow: 4px 4px 8px lightgrey;
     border-radius: 15px;
     display: flex;
     justify-content: space-between;
@@ -267,4 +317,8 @@ footer {
 
 .price {
     font-weight: bold;
+}
+
+.btn_command {
+    margin-top: 40px;
 }

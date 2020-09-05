@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ohmyfood</title>
     <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 </head>
 
 <body>
@@ -13,7 +14,7 @@
     </header>
     <section>
         <div class="location">
-            <img src="picture/location.png"/><span>position</span>
+            <i class="fas fa-map-marker-alt"></i><span>position</span>
         </div>
         <div class="home_top">
             <h2>Réservez le menu qui vous convient</h2>
@@ -22,83 +23,88 @@
         </div>
         <div class="fonctionnement">    
             <h3>Fonctionnement</h3>
-            <div class="operation_btn">
-                <div class="overlay">
-                    <img src="picture/number-one.png" alt="premierement"/>
+
+            <div class="ope_btn">
+                <div class="number">
+                    <span>1</span>
                 </div>
-                <img src="picture/telephone.png" alt="telphone"/>
-                <span>Choississez un restaurant</span>
-            </div>
-            
-            <div class="operation_btn">
-                <div class="overlay">
-                    <img src="picture/number-two.png" alt="secondement"/>
+                <div class="operation">
+                    
+                    <span><i class="fas fa-mobile-alt"></i>Choississez un restaurant</i></span>
                 </div>
-                <img src="picture/menu.png" alt="menu"/> 
-                <span>Créer votre menu</span>
             </div>
-            <div class="operation_btn">
-                <div class="overlay">
-                    <img src="picture/number-three.png" alt="troisiemement"/>
+            <div class="ope_btn">
+                <div class="number">
+                    <span>2</span>
                 </div>
-                <img src="picture/stand.png" alt="stand"/> 
-                <span>Dégustez au restaurant</span>
+                <div class="operation">
+                    
+                    <span><i class="fas fa-bars"></i>Créer un menu</i></span>
+                </div>
             </div>
+            <div class="ope_btn">
+                <div class="number">
+                    <span>3</span>
+                </div>
+                <div class="operation">
+                    
+                    <span><i class="fas fa-store"></i>Déguster au restaurant</i></span>
+                </div>
+            </div>
+
         </div>
         <div class="list_restaurant">
             <h3>Restaurants</h3>
             <div class="restaurant">
                 <div>
-                    <img src="picture/a-la-francaise.jpg" alt="restaurant a la francaise"/>
+                    <a href="francaise.html"><img src="picture/a-la-francaise.jpg" alt="restaurant a la francaise"/></a>
                 </div>
                 <div class="restau__low">
                     <div>
                         <a href="francaise.html">A la Française</a><br><span>Paris</span>
                     </div>
-                    <div class="picture_restau">
-                        <img src="picture/heart.png" alt="coeur"/>
-                    </div>
+                    <div class="heart_restau"></div>
                 </div>
             </div>
 
             <div class="restaurant">
                 <div>
-                    <img src="picture/note.png" alt="restaurant la note enchantée"/>
+                    <a href="enchantee.html"><img src="picture/note.png" alt="restaurant la note enchantée"/></a>
                 </div>
                 <div class="restau__low">
                     <div>
                         <a href="enchantee.html">La note enchantée</a><br><span>Paris</span>
                     </div>
                     <div class="picture_restau">
-                        <img src="picture/heart.png" alt="coeur"/>
+                        <i class="far fa-heart"></i>
                     </div>
                 </div>
             </div>
 
             <div class="restaurant">
                 <div>
-                    <img src="picture/la-palette-du-gout.jpg" alt="restaurant la palette du gout"/>
+                    <a href="palette.html"><img src="picture/la-palette-du-gout.jpg" alt="restaurant la palette du gout"/></a>
                 </div>
                 <div class="restau__low">
                     <div>
                         <a href="palette.html">La palette du gout</a><br><span>Paris</span>
                     </div>
                     <div class="picture_restau">
-                        <img src="picture/heart.png" alt="coeur"/>
+                        <i class="far fa-heart"></i>
                     </div>
                 </div>
             </div>
 
             <div class="restaurant">
                 <div>
-                    <img src="picture/le-delice-des-sens.jpg" alt="restaurant le delice des sens"/>
+                    <a href="delice.html"><img src="picture/le-delice-des-sens.jpg" alt="restaurant le delice des sens"/></a>
                 </div>
                 <div class="restau__low">
                     <div>
                         <a href="delice.html">Le délice des sens</a><br><span>Paris</span>
                     </div>
                     <div class="picture_restau">
-                        <img src="picture/heart.png" alt="coeur"/>
+                        <i class="far fa-heart"></i>
                     </div>
                 </div>
             </div>
@@ -108,8 +114,8 @@
     <footer>
         <h1>ohmyfood</h1>
         <p>
-            <img src="picture/couvert3.png" alt="couvert"/>Sugérer un restaurant
-            <br><img src="picture/partenaire.png" alt="partenaire"/>Devenir partenaire
+            <i class="fas fa-utensils"></i>Sugérer un restaurant
+            <br><i class="fas fa-handshake"></i>Devenir partenaire
             <br>Mentions légales
             <br>Contact
         </p>
