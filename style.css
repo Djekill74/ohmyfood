@@ -1,4 +1,4 @@
-/* general */
+/*--------------- general-------------- */
 @font-face {
   font-family: "shrikhand";
   src: url("template/Shrikhand-Regular.otf");
@@ -7,17 +7,87 @@
   font-family: "roboto";
   src: url("template/Roboto-Regular.ttf");
 }
+/* ---------- general ----------*/
 body {
   width: 100%;
   margin: 0;
   font-family: "roboto", arial, serif;
 }
 
-header img {
-  width: 60%;
-}
-header p {
+header {
   text-align: center;
+  font-size: 10vw;
+  font-family: "shrikhand", arial, serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.general_btn {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  background-color: #9356DC;
+  background-image: linear-gradient(to bottom right, #ff79da, rgba(255, 255, 255, 0));
+  padding: 0.8rem;
+  border-radius: 2rem;
+  color: white;
+  box-shadow: 6px 6px 10px lightgray;
+  transition: all 700ms;
+}
+.general_btn:hover {
+  background-color: #c9abec;
+  box-shadow: 6px 6px 10px gray;
+}
+
+a:visited {
+  color: black;
+}
+
+/* ---------- home page ----------- */
+.spinner {
+  width: 100vw;
+  height: 400vw;
+  position: absolute;
+  margin: auto;
+  background-color: white;
+  z-index: 10;
+  animation: timer-spinner 3s forwards ease-out;
+}
+
+@keyframes timer-spinner {
+  0%, 90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.rectangle-1, .rectangle-2 {
+  width: 20%;
+  height: 5%;
+  background-color: #9356DC;
+  opacity: 0.6;
+  position: absolute;
+  top: 40px;
+  left: 40%;
+  animation: loading-spinner 3s forwards ease-in-out;
+}
+
+.rectangle-2 {
+  animation-delay: -1s;
+}
+
+@keyframes loading-spinner {
+  0%, 100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+.fonctionnement {
+  padding-bottom: 20px;
 }
 
 section h2, section h3 {
@@ -54,41 +124,25 @@ section p {
   padding-bottom: 50px;
 }
 
-.general_btn {
-  width: 50%;
-  margin: auto;
-  text-align: center;
-  background-color: #9356DC;
-  background-image: linear-gradient(to bottom right, #ff79da, rgba(255, 255, 255, 0));
-  padding: 0.8rem;
-  border-radius: 2rem;
-  color: white;
-  box-shadow: 6px 6px 10px lightgray;
-}
-.general_btn:hover {
-  background-color: #c9abec;
-  box-shadow: 6px 6px 10px gray;
-  transition: all 1s;
-}
-
-.fonctionnement {
-  padding-bottom: 20px;
-}
-
 .ope_btn {
   width: 70vw;
   display: flex;
   align-items: center;
   margin: auto;
   margin-bottom: 20px;
+  border-radius: 15px;
+  background-color: whitesmoke;
+  transition: all 500ms;
 }
-.ope_btn :hover {
+.ope_btn .fas {
+  color: black;
+  transition: all 500ms;
+}
+.ope_btn:hover {
   background-color: #f2eafb;
-  transition-duration: 500ms;
 }
-.ope_btn :hover .fas {
+.ope_btn:hover .fas {
   color: #9356DC;
-  transition-duration: 500ms;
 }
 
 .number {
@@ -112,7 +166,7 @@ section p {
   padding-top: 15px;
   padding-bottom: 15px;
   font-weight: bold;
-  background-color: whitesmoke;
+  font-size: 3.8vw;
 }
 
 .fa-mobile-alt, .fa-bars, .fa-store {
@@ -151,7 +205,10 @@ section p {
   text-decoration: none;
   font-weight: bold;
   color: black;
-  font-size: 1.5rem;
+  font-size: 6vw;
+}
+.restau__low span {
+  font-size: 5vw;
 }
 
 .fa-heart {
@@ -162,10 +219,6 @@ section p {
   width: 60px;
   height: 60px;
   background: url("picture/favorite_border-black-18dp.svg");
-  background-size: cover;
-}
-.heart_restau:focus {
-  background: url("picture/favorite-black-18dp.svg");
   background-size: cover;
 }
 .heart_restau:hover {
@@ -198,22 +251,18 @@ footer p {
   padding-right: 10px;
 }
 
-/* page restaurant */
-#logo {
-  position: relative;
-}
-
-#arrow {
-  position: absolute;
-  width: 10%;
-  vertical-align: middle;
-  left: 10px;
-}
-
+/* --------------page restaurant------------- */
 .header__resto {
   margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.arrow {
+  position: absolute;
+  margin-right: 85%;
 }
 
 .resto_top {
@@ -275,6 +324,31 @@ footer p {
   font-size: 1.2em;
 }
 
+.entree {
+  animation: timer-group 2s forwards;
+}
+
+.main_dish {
+  animation: timer-group 4s forwards;
+}
+
+.dessert {
+  animation: timer-group 6s forwards;
+}
+
+/* 
+@keyframes timer-group {
+    0%,99% {visibility: hidden} 100% {visibility: visible}
+}
+*/
+@keyframes timer-group {
+  0%, 80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .dish_btn {
   background-color: white;
   box-shadow: 4px 4px 8px lightgrey;
@@ -287,7 +361,7 @@ footer p {
   margin-bottom: 20px;
 }
 .dish_btn h1 {
-  font-size: 1.2em;
+  font-size: 4vw;
   text-align: left;
 }
 .dish_btn h2 {
@@ -307,6 +381,145 @@ footer p {
 
 .btn_command {
   margin-top: 40px;
+}
+
+/* --------------- Media query ------------- */
+@media screen and (min-width: 480px) and (max-width: 1279px) {
+  header {
+    font-size: 7vw;
+  }
+
+  .restaurant {
+    width: 40%;
+  }
+
+  .box_restaurant {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .resto_top_empty {
+    height: 400px;
+  }
+
+  .entree, .main_dish, .dessert {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .dish_btn h1 {
+    font-size: 1.5em;
+  }
+
+  .general_btn {
+    width: 40%;
+  }
+
+  .ope_btn {
+    width: 60%;
+  }
+
+  .operation {
+    font-size: 1em;
+  }
+
+  .restau__low a {
+    font-size: 2.8vw;
+  }
+  .restau__low span {
+    font-size: 2.2vw;
+  }
+
+  .spinner {
+    height: 150vw;
+  }
+
+  .rectangle-1, .rectangle-2 {
+    height: 15%;
+    top: 200px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  body {
+    width: 1280px;
+    margin: auto;
+  }
+
+  header {
+    font-size: 5vw;
+  }
+
+  header img {
+    width: 30%;
+  }
+
+  .general_btn {
+    width: 20%;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  .ope_btn {
+    width: 30%;
+  }
+
+  .operation {
+    font-size: 1.2em;
+  }
+
+  .restaurant {
+    width: 40%;
+  }
+
+  .box_restaurant {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  .resto_top_empty {
+    height: 600px;
+  }
+
+  .resto_name {
+    font-size: 3em;
+  }
+
+  .entree, .main_dish, .dessert {
+    padding-left: 300px;
+    padding-right: 300px;
+  }
+
+  .dish_btn h1 {
+    font-size: 1.8em;
+  }
+  .dish_btn span {
+    font-size: 1.5em;
+  }
+
+  .restau__low a {
+    font-size: 2.5em;
+  }
+  .restau__low span {
+    font-size: 2em;
+  }
+
+  .spinner {
+    width: 1280px;
+    height: 1280px;
+  }
+
+  .rectangle-1, .rectangle-2 {
+    height: 20%;
+    top: 200px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
