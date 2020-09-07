@@ -45,8 +45,11 @@ header {
     }
 }
 
-a:visited {
+a {
     color: black;
+    &:visited {
+    color: black;
+    }
 }
 
 /* ---------- home page ----------- */
@@ -344,11 +347,7 @@ footer {
 .dessert {
     animation: timer-group 6s forwards;
 }
-/* 
-@keyframes timer-group {
-    0%,99% {visibility: hidden} 100% {visibility: visible}
-}
-*/
+
 @keyframes timer-group {
     0%,80% {opacity: 0;} 100% {opacity: 1;}
 }
@@ -384,8 +383,10 @@ footer {
     font-weight: bold;
 }
 
-.btn_command {
-    margin-top: 40px;
+
+.back-command {
+    background-color: whitesmoke;
+    padding-top: 30px;
 }
 
 /* --------------- Media query ------------- */
