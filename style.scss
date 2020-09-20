@@ -317,6 +317,7 @@ footer {
     font-family: "shrikhand", arial, serif;
     font-size: 1.8em;
     border-radius: 20px 20px 0 0;
+    text-align: center;
 }
 
 .line_dish {
@@ -362,7 +363,7 @@ footer {
     box-shadow: 4px 4px 8px lightgrey;
     border-radius: 15px;
     height: 18vw;
-    display: flex;
+    display: flex;    
     justify-content: space-between;
     padding-left: 20px;
     align-items: center;
@@ -370,28 +371,22 @@ footer {
 
     margin-bottom: 20px;
     & h2 {
-        font-size: 4vw;
+        font-size: 4.5vw;
         text-align: left;
+        padding-left: 10px;
     }
     & h3 {
-        font-size: 3vw;
+        font-size: 3.5vw;
         text-align: left;
         font-weight: normal;
     }
 }
 
-.name_dish {
-    width: 85%;
-    white-space: nowrap;
-    z-index: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-}
 
 .val_btn {
     width: 15%;
     height: 18vw;
+    margin-left: auto;
     z-index: 3;
     position: relative;
     opacity: 0;
@@ -399,8 +394,11 @@ footer {
     transition: all 1s;
 
    &:hover {
-       width: 40%;
-        &+ .price {
+       width: 30%;
+       &+ .name_dish {
+        width: 70%;
+        }
+        &~ .price {
         transform: translate(-100%, 0);
         border-radius: 0;
         }
@@ -408,6 +406,19 @@ footer {
             transform: translateX(0%);
         }
     }
+}
+
+.name_dish {
+    width: 85%;
+    z-index: 0;
+    position: absolute;
+    left: 0%;
+    transition: all 1s;
+    & h3, h2 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        }    
 }
 
 .price{

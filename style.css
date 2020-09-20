@@ -308,6 +308,7 @@ footer a {
   font-family: "shrikhand", arial, serif;
   font-size: 1.8em;
   border-radius: 20px 20px 0 0;
+  text-align: center;
 }
 
 .line_dish {
@@ -365,26 +366,20 @@ footer a {
   margin-bottom: 20px;
 }
 .dish_btn h2 {
-  font-size: 4vw;
+  font-size: 4.5vw;
   text-align: left;
+  padding-left: 10px;
 }
 .dish_btn h3 {
-  font-size: 3vw;
+  font-size: 3.5vw;
   text-align: left;
   font-weight: normal;
-}
-
-.name_dish {
-  width: 85%;
-  white-space: nowrap;
-  z-index: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .val_btn {
   width: 15%;
   height: 18vw;
+  margin-left: auto;
   z-index: 3;
   position: relative;
   opacity: 0;
@@ -392,14 +387,30 @@ footer a {
   transition: all 1s;
 }
 .val_btn:hover {
-  width: 40%;
+  width: 30%;
 }
-.val_btn:hover + .price {
+.val_btn:hover + .name_dish {
+  width: 70%;
+}
+.val_btn:hover ~ .price {
   transform: translate(-100%, 0);
   border-radius: 0;
 }
 .val_btn:hover ~ .checked span {
   transform: translateX(0%);
+}
+
+.name_dish {
+  width: 85%;
+  z-index: 0;
+  position: absolute;
+  left: 0%;
+  transition: all 1s;
+}
+.name_dish h3, .name_dish h2 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .price {
