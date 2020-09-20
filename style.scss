@@ -20,7 +20,7 @@ body {
     font-family: "roboto", arial, serif;
 }
 
-header {
+header h1 {
     text-align: center;
     font-size: 10vw;
     font-family: "shrikhand", arial, serif;
@@ -240,7 +240,7 @@ footer {
     padding-top: 20px;
     background-color: rgb(49, 49, 49);
     color: white;
-    & h1 {
+    & h2 {
         padding-top: 10px;
         margin-left: 20px;
         font-family: "shrikhand", arial, serif;
@@ -277,7 +277,9 @@ footer {
 
 .arrow {
     position: absolute;
-    padding-right: 85vw;
+    font-size: 8vw;
+    padding-top: 20px;
+    left: 3%;
 }
 
 .resto_top {
@@ -367,11 +369,11 @@ footer {
     position: relative;
 
     margin-bottom: 20px;
-    & h1 {
+    & h2 {
         font-size: 4vw;
         text-align: left;
     }
-    & h2 {
+    & h3 {
         font-size: 3vw;
         text-align: left;
         font-weight: normal;
@@ -381,57 +383,11 @@ footer {
 .name_dish {
     width: 85%;
     white-space: nowrap;
+    z-index: 0;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-/*
-.val_btn {
-    width: 15%;
-    height: 18vw;
-    position: relative;
-    z-index: 1;
-    font-size: 3vw;
-    opacity: 0;
-    border-radius: 0 15px 15px 0;
-    background-color: $third_color;
-    white-space: nowrap;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 500ms;
 
-    & p {
-        margin-block-start: 6vw;
-   }
-    &:hover {
-        opacity: 1;
-        transform: scale(1.2,1.02);
-        transform-origin: 100% 50% ;
-        + .price {
-            transition: all 500ms;
-            transform: translate(-100%);
-            z-index: 2;
-        }
-    }
 }
-
-.price {
-    font-weight: bold;
-    position: absolute;
-    width: 15%;
-    margin: auto;
-    text-align: center;
-    font-size: 3vw;
-    border-radius: 0 15px 15px 0;
-    right: 0%;
-    z-index: 0;
-    background-color: white;
-    height: 18vw;   
-    & p{
-        margin-block-start: 6vw;
-    }
-}
-
-*/
 
 .val_btn {
     width: 15%;
@@ -440,25 +396,30 @@ footer {
     position: relative;
     opacity: 0;
     cursor: pointer;
+    transition: all 1s;
+
    &:hover {
+       width: 40%;
         &+ .price {
         transform: translate(-100%, 0);
         border-radius: 0;
         }
-        &~ .checked {
+        &~ .checked span {
+            transform: translateX(0%);
         }
     }
 }
 
 .price{
-    width: 15%;
+    width: 15.2%;
     height: 18vw;
     z-index: 2;
     position: absolute;
     right: 0%;
     border-radius: 0 15px 15px 0;
-    transition: all 1s;
+    transition: transform 1s;
     background-color: white;
+    font-size: 4vw;
 }
 
 .checked {
@@ -469,6 +430,16 @@ footer {
     z-index: 1;
     right: 0%;
     background-color: $third_color;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    & span {
+        display: inline-block;
+        margin: auto;
+        transform: translateX(400%) rotate(180deg);
+        transition: transform 1s;
+        font-size: 4vw;
+    }
 }
 
 
@@ -480,12 +451,12 @@ footer {
 
 /* --------------- Media query ------------- */
 
-@media screen and (min-width: 480px) and (max-width: 1279px) {
+@media screen and (min-width: 721px) and (max-width: 1279px) {
 
-    header {
-        font-size: 7vw;
+    header h1, .arrow {
+        font-size: 6em;
     }
-
+    
     .restaurant {
         width: 40%;
     }
@@ -506,10 +477,10 @@ footer {
     }
 
     .dish_btn {
-        & h1 {
+        & h2 {
             font-size: 1.8em;
         }
-        & h2 {
+        & h3 {
             font-size: 1.5em;
         }
     }
@@ -559,6 +530,12 @@ footer {
             margin-block-start: 30px;
         }
     }
+    .checked {
+        height: 120px;
+        & span {
+            font-size: 2em;
+        }
+    }
 
 }
 
@@ -570,10 +547,14 @@ footer {
         margin:auto;
     }
 
-    header {
-        font-size: 5vw;
+    header h1, .arrow {
+        font-size: 6em;
     }
-
+    .header__resto{position: relative;}
+    .arrow {
+        left: 0%;
+    }
+    
     header img { 
         width: 30%;
     }
@@ -641,10 +622,10 @@ footer {
     }
     
     .dish_btn {
-        & h1 {
+        & h2 {
             font-size: 1.8em;
         }
-        & h2 {
+        & h3 {
             font-size: 1.5em;
         }
     }
@@ -671,55 +652,11 @@ footer {
 
     .checked {
         height: 120px;
-        & p {
-            margin-block-start: 40px;
+        & span {
+            font-size: 2em;
+            transform: translateX(300%) rotate(180deg);
         }
     }
 
-}
-
-/*---------------test de checkbox ------------*/
-
-
-.test3 {
-    display: flex;    
-    justify-content: space-between;
-    border: 1px solid black;
-    width: 50%;
-}
-.blabla2{
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-}
-.box_2 {
-  
-    transition: all 500ms;
-    background-color: yellow;
-    position: absolute;
-    right: 50%;
-    width: 70px;
-    z-index: 0;
-}
-
-.btn {
-    z-index: 1;
-    position: relative;
-    width: 70px;
-    opacity: 0;
-    background-color: salmon;
-    text-align: end;
-    cursor: pointer;
-    transition: all 500ms;
-    &:hover {
-        opacity: 1;
-        width: 140px;
-        padding-right: 30px;
-        + .box_2 {
-
-            transform: translate(-70px);
-        }
-    }
 }
 
