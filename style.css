@@ -89,22 +89,18 @@ a:visited {
     transform: scale(1);
   }
 }
-.fonctionnement {
-  padding-bottom: 20px;
-}
-
-section h2, section h3 {
+body h2, body h3 {
   font-weight: bold;
 }
-section h2 {
+body h2 {
   margin-block-start: 0;
   text-align: center;
 }
-section h3 {
+body h3 {
   padding-left: 20px;
   font-size: 1.8em;
 }
-section p {
+body p {
   text-align: center;
 }
 
@@ -119,7 +115,7 @@ section p {
   padding-right: 10px;
 }
 
-.home_top {
+#home_top {
   background-color: whitesmoke;
   padding-top: 30px;
   padding-bottom: 50px;
@@ -175,8 +171,9 @@ section p {
   padding-right: 20px;
 }
 
-.list_restaurant {
+#list_restaurant {
   background-color: whitesmoke;
+  margin-top: 50px;
   padding-top: 20px;
   padding-bottom: 30px;
 }
@@ -258,7 +255,7 @@ footer a {
 }
 
 /* --------------page restaurant------------- */
-.header__resto {
+.menu {
   margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
@@ -306,7 +303,7 @@ footer a {
   justify-content: space-around;
   align-items: center;
   font-family: "shrikhand", arial, serif;
-  font-size: 1.8em;
+  font-size: 4vw;
   border-radius: 20px 20px 0 0;
   text-align: center;
 }
@@ -474,6 +471,9 @@ footer a {
     padding-left: 50px;
     padding-right: 50px;
   }
+  .entree h4, .main_dish h4, .dessert h4 {
+    font-size: 2.2em;
+  }
 
   .dish_btn h2 {
     font-size: 1.8em;
@@ -492,6 +492,10 @@ footer a {
 
   .operation {
     font-size: 1em;
+  }
+
+  .resto_name {
+    font-size: 2em;
   }
 
   .restau__low a {
@@ -518,16 +522,13 @@ footer a {
     height: 120px;
     font-size: 1.5em;
   }
-  .val_btn p {
-    margin-block-start: 30px;
-  }
 
   .price {
     height: 120px;
     font-size: 1.5em;
   }
   .price p {
-    margin-block-start: 30px;
+    margin-top: 40px;
   }
 
   .checked {
@@ -547,7 +548,7 @@ footer a {
     font-size: 6em;
   }
 
-  .header__resto {
+  .menu {
     position: relative;
   }
 
@@ -594,12 +595,15 @@ footer a {
   }
 
   .resto_name {
-    font-size: 3em;
+    font-size: 2em;
   }
 
   .entree, .main_dish, .dessert {
     padding-left: 300px;
     padding-right: 300px;
+  }
+  .entree h4, .main_dish h4, .dessert h4 {
+    font-size: 2.2em;
   }
 
   .restau__low a {
@@ -634,16 +638,13 @@ footer a {
     height: 120px;
     font-size: 1.5em;
   }
-  .val_btn p {
-    margin-block-start: 40px;
-  }
 
   .price {
     height: 120px;
     font-size: 1.5em;
   }
   .price p {
-    margin-block-start: 40px;
+    margin-top: 40px;
   }
 
   .checked {

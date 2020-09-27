@@ -1,117 +1,115 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ohmyfood</title>
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 </head>
 
 <body>
     <header>
         <h1>ohmyfood</h1>
     </header>
-    <section>
+    <main>
         <div class="spinner">
             <div class="rectangle-1"></div>
             <div class="rectangle-2"></div>
         </div>
-
         <div class="location">
             <i class="fas fa-map-marker-alt"></i><span>position</span>
         </div>
-        <div class="home_top">
-            <h2>Réservez le menu qui vous convient</h2>
-            <p>Découvrez des restaurants d'exeptions, sélectionnés par nos soins</p>
-            <div class="general_btn"><span>Explorez nos restaurants</span></div>
-        </div>
-        <div class="fonctionnement">    
-            <h3>Fonctionnement</h3>
-
-             <div class="ope_btn">
-                <div class="number">
-                    <span>1</span>
-                </div>
-                <div class="operation">
-                    
-                    <span><i class="fas fa-mobile-alt"></i>Choississez un restaurant</span>
-                </div>
+        <article>
+            <div id="home_top">
+                <h2>Réservez le menu qui vous convient</h2>
+                <p>Découvrez des restaurants d'exeptions, sélectionnés par nos soins</p>
+                <div class="general_btn"><span>Explorez nos restaurants</span></div>
             </div>
-            <div class="ope_btn">
-                <div class="number">
-                    <span>2</span>
-                </div>
-                <div class="operation">
-                    
-                    <span><i class="fas fa-bars"></i>Créer un menu</span>
-                </div>
-            </div>
-            <div class="ope_btn">
-                <div class="number">
-                    <span>3</span>
-                </div>
-                <div class="operation">
-                    
-                    <span><i class="fas fa-store"></i>Déguster au restaurant</span>
-                </div>
-            </div>
-
-        </div>
-        <div class="list_restaurant">
-            <h3>Restaurants</h3>
-            <div class="box_restaurant">
-            <div class="restaurant">
-                <div>
-                    <a href="francaise.html"><img src="picture/a-la-francaise.jpg" alt="restaurant a la francaise"/></a>
-                </div>
-                <div class="restau__low">
-                    <div>
-                        <a href="francaise.html">A la Française</a><br><span>Paris</span>
+            <section>
+                <h3>Fonctionnement</h3>
+                <div class="ope_btn">
+                    <div class="number">
+                        <span>1</span>
                     </div>
-                    <div class="heart_restau"></div>
-                </div>
-            </div>
-
-            <div class="restaurant">
-                <div>
-                    <a href="enchantee.html"><img src="picture/note.png" alt="restaurant la note enchantée"/></a>
-                </div>
-                <div class="restau__low">
-                    <div>
-                        <a href="enchantee.html">La note enchantée</a><br><span>Paris</span>
+                    <div class="operation">
+                        <span><i class="fas fa-mobile-alt"></i>Choississez un restaurant</span>
                     </div>
-                    <div class="heart_restau"></div>
                 </div>
-            </div>
-
-            <div class="restaurant">
-                <div>
-                    <a href="palette.html"><img src="picture/la-palette-du-gout.jpg" alt="restaurant la palette du gout"/></a>
-                </div>
-                <div class="restau__low">
-                    <div>
-                        <a href="palette.html">La palette du gout</a><br><span>Paris</span>
+                <div class="ope_btn">
+                    <div class="number">
+                        <span>2</span>
                     </div>
-                    <div class="heart_restau"></div>
-                </div>
-            </div>
-
-            <div class="restaurant">
-                <div>
-                    <a href="delice.html"><img src="picture/le-delice-des-sens.jpg" alt="restaurant le delice des sens"/></a>
-                </div>
-                <div class="restau__low">
-                    <div>
-                        <a href="delice.html">Le délice des sens</a><br><span>Paris</span>
+                    <div class="operation">
+                        <span><i class="fas fa-bars"></i>Créer un menu</span>
                     </div>
-                    <div class="heart_restau"></div>
                 </div>
-            </div>
-            </div>
-        </div>
-    </section>
-
+                <div class="ope_btn">
+                    <div class="number">
+                        <span>3</span>
+                    </div>
+                    <div class="operation">
+                        <span><i class="fas fa-store"></i>Déguster au restaurant</span>
+                    </div>
+                </div>
+            </section>
+            <section id="list_restaurant">
+                <h3>Restaurants</h3>
+                <div class="box_restaurant">
+                    <div class="restaurant">
+                        <div>
+                            <a href="francaise.html"><img src="picture/a-la-francaise.jpg"
+                                    alt="restaurant a la francaise" /></a>
+                        </div>
+                        <div class="restau__low">
+                            <div>
+                                <a href="francaise.html">A la Française</a><br><span>Paris</span>
+                            </div>
+                            <div class="heart_restau"></div>
+                        </div>
+                    </div>
+                    <div class="restaurant">
+                        <div>
+                            <a href="enchantee.html"><img src="picture/note.png"
+                                    alt="restaurant la note enchantée" /></a>
+                        </div>
+                        <div class="restau__low">
+                            <div>
+                                <a href="enchantee.html">La note enchantée</a><br><span>Paris</span>
+                            </div>
+                            <div class="heart_restau"></div>
+                        </div>
+                    </div>
+                    <div class="restaurant">
+                        <div>
+                            <a href="palette.html"><img src="picture/la-palette-du-gout.jpg"
+                                    alt="restaurant la palette du gout" /></a>
+                        </div>
+                        <div class="restau__low">
+                            <div>
+                                <a href="palette.html">La palette du gout</a><br><span>Paris</span>
+                            </div>
+                            <div class="heart_restau"></div>
+                        </div>
+                    </div>
+                    <div class="restaurant">
+                        <div>
+                            <a href="delice.html"><img src="picture/le-delice-des-sens.jpg"
+                                    alt="restaurant le delice des sens" /></a>
+                        </div>
+                        <div class="restau__low">
+                            <div>
+                                <a href="delice.html">Le délice des sens</a><br><span>Paris</span>
+                            </div>
+                            <div class="heart_restau"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
     <footer>
         <h2>ohmyfood</h2>
         <p>
@@ -122,4 +120,5 @@
         </p>
     </footer>
 </body>
+
 </html>

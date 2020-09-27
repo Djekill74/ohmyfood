@@ -93,11 +93,9 @@ a {
         transform: scale(1.0);
     }
 }
-.fonctionnement {
-    padding-bottom: 20px;
-}
 
-section {
+
+body {
     & h2, h3 {
         font-weight: bold;
     }
@@ -125,7 +123,7 @@ section {
     }
 }
 
-.home_top {
+#home_top {
     background-color: whitesmoke;
     padding-top: 30px;
     padding-bottom: 50px;
@@ -181,8 +179,9 @@ section {
     padding-right: 20px;
 }
 
-.list_restaurant {
+#list_restaurant {
     background-color: whitesmoke;
+    margin-top: 50px;
     padding-top: 20px;
     padding-bottom: 30px;
 }
@@ -267,7 +266,7 @@ footer {
 /* --------------page restaurant------------- */
 
 
-.header__resto {
+.menu {
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
@@ -315,7 +314,7 @@ footer {
     justify-content: space-around;
     align-items: center;
     font-family: "shrikhand", arial, serif;
-    font-size: 1.8em;
+    font-size: 4vw;
     border-radius: 20px 20px 0 0;
     text-align: center;
 }
@@ -485,6 +484,9 @@ footer {
     .entree, .main_dish, .dessert {
         padding-left: 50px;
         padding-right: 50px;
+        & h4 {
+            font-size: 2.2em;
+        }
     }
 
     .dish_btn {
@@ -505,6 +507,9 @@ footer {
 
     .operation {
         font-size: 1em;
+    }
+    .resto_name {
+        font-size: 2em;
     }
 
     .restau__low {
@@ -530,15 +535,12 @@ footer {
     .val_btn {
         height: 120px;
         font-size: 1.5em;
-        & p {
-            margin-block-start: 30px;
-        }
     }
     .price {
         height: 120px;
         font-size: 1.5em;
         & p {
-            margin-block-start: 30px;
+            margin-top: 40px;
         }
     }
     .checked {
@@ -561,7 +563,7 @@ footer {
     header h1, .arrow {
         font-size: 6em;
     }
-    .header__resto{position: relative;}
+    .menu{position: relative;}
     .arrow {
         left: 0%;
     }
@@ -606,12 +608,15 @@ footer {
 
 
     .resto_name {
-        font-size: 3em;
+        font-size: 2em;
     }
 
     .entree, .main_dish, .dessert {
         padding-left: 300px;
         padding-right: 300px;
+        & h4 {
+            font-size: 2.2em;
+        }
     }
 
     .restau__low {
@@ -648,16 +653,13 @@ footer {
     .val_btn {
         height: 120px;
         font-size: 1.5em;
-        & p {
-            margin-block-start: 40px;
-        }
     }
 
     .price {
         height: 120px;
         font-size: 1.5em;
         & p {
-            margin-block-start: 40px;
+            margin-top: 40px;
         }
     }
 
