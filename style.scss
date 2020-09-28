@@ -207,6 +207,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     & a {
         text-decoration: none;
         font-weight: bold;
@@ -222,17 +223,31 @@ body {
     font-size: 2em;
 }
 
-.heart_restau {
-    width: 60px;
-    height: 60px;
-    background: url("picture/favorite_border-black-18dp.svg");
-    background-size: cover;
+.heart_empty {
     cursor: pointer;
     transition: all 500ms;
-     &:hover {
-        background: url("picture/favorite-black-18dp.svg");
-        background-size: cover;
+    position: absolute;
+    right: 0%;
+    background: -webkit-gradient(linear, left top, left bottom, from($primary_color), to($secondary_color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.5em;
+}
+.heart_full{
+    position: absolute;
+    right: 0%;
+    opacity: 0;
+    transition: 500ms;
+    background: -webkit-gradient(linear, left top, left bottom, from($primary_color), to($secondary_color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.5em;
+        &:hover {
+        opacity: 1;
     }
+}
+.resto_name .heart_empty, .resto_name .heart_full {
+    padding-right: 20px;
 }
 
 footer {
@@ -317,6 +332,7 @@ footer {
     font-size: 4vw;
     border-radius: 20px 20px 0 0;
     text-align: center;
+    position: relative;
 }
 
 .line_dish {
@@ -449,6 +465,7 @@ footer {
         transform: translateX(400%) rotate(180deg);
         transition: transform 1s;
         font-size: 4vw;
+
     }
 }
 
